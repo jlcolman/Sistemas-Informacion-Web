@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TAREA 2 - EJEMPLOS CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .articulos {
+            list-style-type: none; 
+            padding: 0; 
+        }
+
+        .articulos li {
+            background-color: #fff; 
+            border: 2px solid #007BFF; 
+            border-radius: 5px;
+            margin: 10px 0; 
+            padding: 15px; 
+            font-size: 18px; 
+            color: #333; 
+            transition: background-color 0.3s;
+            cursor: pointer; 
+        }
+
+        .articulos li:hover {
+            background-color: #e7f1ff; 
+        }
+
+        
+        .contenido {
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.3s ease; 
+            background-color: #f9f9f9; 
+            padding: 0 15px; 
+        }
+
+       
+        input[type="checkbox"] {
+            display: none; 
+        }
+
+        
+        input[type="checkbox"]:checked + .contenido {
+            max-height: 100px; 
+            padding: 10px 15px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML & CSS</h1>
+
+    <ul class="articulos">
+        <li>
+            <label>
+                <input type="checkbox"> La Web e Internet
+                <div class="contenido">
+                    La Web es un sistema de información que permite acceder a documentos y recursos a través de Internet.
+                </div>
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox"> Modelos de Comunicación
+                <div class="contenido">
+                    Los modelos de comunicación describen cómo se transmite la información entre un emisor y un receptor.
+                </div>
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox"> URL
+                <div class="contenido">
+                    Una URL (Uniform Resource Locator) es la dirección que se utiliza para acceder a un recurso en la web.
+                </div>
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox"> Definición HTML
+                <div class="contenido">
+                    HTML (HyperText Markup Language) es el lenguaje de marcado utilizado para crear páginas web.
+                </div>
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox"> Definición CSS
+                <div class="contenido">
+                    CSS (Cascading Style Sheets) es un lenguaje de estilo utilizado para describir la presentación de un documento HTML.
+                </div>
+            </label>
+        </li>
+    </ul> 
+</body>
+</html>
