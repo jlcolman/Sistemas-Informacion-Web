@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ejercicio 05</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f4f4f4;
+
+            margin: 0;
+
+            padding: 20px;
+
+        }
+
+        h1 {
+
+            text-align: center;
+
+        }
+
+        .container {
+
+            max-width: 400px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 20px;
+
+            border-radius: 5px;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        input[type="number"] {
+
+            width: 100%;
+
+            padding: 10px;
+
+            margin: 10px 0;
+
+            border: 1px solid #ccc;
+
+            border-radius: 5px;
+
+        }
+
+        button {
+
+            width: 100%;
+
+            padding: 10px;
+
+            background-color: #007bff;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 6px;
+
+            cursor: pointer;
+
+        }
+
+        button:hover {
+
+            background-color: #0056b3;
+
+        }
+
+        .result {
+
+            margin-top: 20px;
+
+            font-size: 1.4em;
+
+            text-align: center;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <h1>Cálculo de Edad Futura</h1>
+
+        <label for="age">Ingrese su edad actual:</label>
+
+        <input type="number" id="age" placeholder="Ingrese su edad" required>
+
+
+        <button onclick="calculateFutureAges()">Calcular Edad Futura</button>
+
+
+        <div class="result" id="result"></div>
+
+    </div>
+
+
+    <script>
+
+        function calculateFutureAges() {
+
+            const age = parseInt(document.getElementById('age').value);
+
+            const resultDiv = document.getElementById('result');
+
+
+            if (isNaN(age) || age < 0) {
+
+                resultDiv.innerHTML = "Por favor, ingrese una edad válida.";
+
+                return;
+
+            }
+
+
+            const ageIn5Years = age + 5;
+
+            const ageIn10Years = age + 10;
+
+            const ageIn100Years = age + 100;
+
+
+            const message = `En 5 años tendrás ${ageIn5Years} años, en 10 años tendrás ${ageIn10Years} años, y en 100 años tendrás ${ageIn100Years} años.`;
+
+            resultDiv.innerHTML = message;
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

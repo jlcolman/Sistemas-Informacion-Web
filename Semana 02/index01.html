@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 01</title>
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f4f4f4;
+
+            margin: 0;
+
+            padding: 20px;
+
+        }
+
+        h1 {
+
+            text-align: center;
+
+        }
+
+        .container {
+
+            max-width: 400px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 20px;
+
+            border-radius: 5px;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        input[type="number"], input[type="text"] {
+
+            width: 100%;
+
+            padding: 10px;
+
+            margin: 10px 0;
+
+            border: 1px solid #ccc;
+
+            border-radius: 5px;
+
+        }
+
+        button {
+
+            width: 100%;
+
+            padding: 10px;
+
+            background-color: #28a745;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+        }
+
+        button:hover {
+
+            background-color: #218838;
+
+        }
+
+        .result {
+
+            margin-top: 20px;
+
+            font-size: 1.2em;
+
+            text-align: center;
+
+        }
+    </style>
+    </head>
+<body>
+    <div class="container">
+
+        <h1>Conversor de Gs a USD</h1>
+
+        <label for="amount">Monto en Guaraníes (Gs):</label>
+
+        <input type="number" id="amount" placeholder="Ingrese el monto en Gs" required>
+
+
+        <label for="exchangeRate">Valor de cambio (Gs a USD):</label>
+
+        <input type="text" id="exchangeRate" placeholder="Ingrese el valor de cambio" required>
+
+
+        <button onclick="convertCurrency()">Convertir</button>
+
+
+        <div class="result" id="result"></div>
+
+    </div>
+        <script> function convertCurrency() {
+
+            const amount = parseFloat(document.getElementById('amount').value);
+
+            const exchangeRate = parseFloat(document.getElementById('exchangeRate').value);
+
+            const resultDiv = document.getElementById('result');
+
+
+            if (isNaN(amount) || isNaN(exchangeRate) || amount <= 0 || exchangeRate <= 0) {
+
+                result@Div.innerHTML = "Por favor, ingrese valores válidos.";
+
+                return;
+
+            }
+
+            const convertedAmount = amount / exchangeRate;
+
+            resultDiv.innerHTML = `El monto en Dólares (USD) es: $${convertedAmount.toFixed(2)}`;
+
+        }
+        </script>
+    
+</body>
+</html>
